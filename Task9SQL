@@ -1,0 +1,18 @@
+Создание таблицы
+create table parents
+(
+    id           INTEGER
+        primary key autoincrement,
+    name         varchar(255),
+    created_time datetime default CURRENT_TIMESTAMP not null
+);
+
+Добавление данных
+
+insert into parents (name) values('Марина')
+insert into parents (name) values('Марина')
+insert into parents (name) values('Алексей')
+
+1) select count(*) from students inner join parents on students.parent_id = parents.id
+2) select count(*) from students inner join parents on students.parent_id = parents.id where parents.name='Марина'
+3) select count(*) from students where parent_id is null;

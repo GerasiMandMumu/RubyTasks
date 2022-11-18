@@ -1,0 +1,21 @@
+create table students
+(
+    id         INTEGER not null
+        primary key autoincrement,
+    name       TEXT,
+    created_at DATETIME default CURRENT_TIMESTAMP,
+    parent_id  INTEGER
+);
+
+Вставка данных
+insert into students (name, parent_id) values ('Виктория', 1);
+insert into students (name, parent_id) values ('Наталия', 2);
+insert into students (name, parent_id) values ('Анжела', 2)
+insert into students (name, parent_id) values ('Константин', 3);
+insert into students (name, parent_id) values ('Сергей', 4);
+insert into students (name, parent_id) values ('Иван', 5);
+insert into students (name, parent_id) values ('Иван', 5);
+
+1) select count(*) from students
+2) select * from students where name='Иван'
+3) select * from students where DATE(created_at) > '2020-09-01'
